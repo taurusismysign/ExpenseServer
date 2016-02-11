@@ -1,0 +1,18 @@
+applications:
+- name: expense-api
+  env:
+    NODE_ENV: 'production'
+    USE_DB_STORAGE: 'true'
+  mem: 128M
+  services:
+    ${name}-mongo-db:
+       type: mongodb
+    ${name}-redis-db:
+       type: redis
+  hooks:
+     post-staging:
+     # create imgages folder in the shared filesystem
+     #- mkdir -p "$HELION_FILESYSTEM"/images
+  stackato:
+    ignores:
+    - node_modules
