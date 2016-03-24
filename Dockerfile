@@ -1,4 +1,4 @@
-FROM hwestphal/nodebox
+FROM node:latest
 
 COPY ./ /src
 WORKDIR /src
