@@ -6,7 +6,11 @@ exports.addHeader = function (req, res, next) {
     res.header("Access-Control-Allow-Credentials", false);
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, HP-Server, HP-Cache");
     res.header("Access-Control-Allow-Methods", "GET, PUT, POST, PATCH, DELETE, OPTIONS");
-    res.header("Access-Control-Expose-Headers", "Origin, X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, HP-Server, HP-Cache");
+    res.header("Access-Control-Expose-Headers", "Origin, X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, HP-Server, HP-Cache, X-PROVIDER");
+    if (process.env.PROVIDER)
+    {
+        res.header("X-PROVIDER", process.env.PROVIDER);
+    }
 
     if (req.method === 'OPTIONS') {
         res.writeHead(200);

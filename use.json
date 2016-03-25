@@ -4,5 +4,6 @@
   "expensesController": "./app/controllers/expensesController.js",
   "localStorageController": "./app/controllers/localStorageController.js",
   "objectStorageController": "./app/controllers/objectStorageController.js",
-  "reportsController": "./app/controllers/reportsController.js"
+  "reportsController": "./app/controllers/reportsController.js",
+  "statisticsController": "./app/controllers/statisticsController.js"
 }
