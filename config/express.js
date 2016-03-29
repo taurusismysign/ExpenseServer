@@ -15,4 +15,4 @@ module.exports = function (app) {
     app.use(cors.addHeader);
     app.use(morgan("combined"));
     app.use(serverIp.getAddress);
-}
+};
