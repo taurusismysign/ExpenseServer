@@ -1,5 +1,5 @@
 applications:
-- name: manav-expense-api
+- name: manav-expense-server
   env:
     NODE_ENV: 'production'
     USE_DB_STORAGE: 'true'
